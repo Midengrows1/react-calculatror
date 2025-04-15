@@ -1,23 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import s from './App.module.scss';
-// const regexNumber = /^[0-9]+$/;
 function App() {
   const [inputValue, setInputValue] = useState<string>('0');
-
-  // const calculatorBtns: (string | number)[] = [
-  //   0,
-  //   1,
-  //   2,
-  //   3,
-  //   4,
-  //   5,
-  //   6,
-  //   7,
-  //   8,
-  //   9,
-  //   '-',
-  //   '+',
-  // ];
   const [resultShown, setResultShown] = useState<boolean>(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const numbArr: (string | number)[] = Array(10)
@@ -55,7 +39,6 @@ function App() {
   useEffect(() => {
     inputRef?.current?.focus();
   }, []);
-  console.log(resultShown);
 
   return (
     <div className={s.calculator}>
